@@ -1,0 +1,6 @@
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
+Commands: 
+docker container run -d devopsdockeruh/simple-web-service:ubuntu
+docker container exec -it serene_engelbart bash
+tail -f ./text.log

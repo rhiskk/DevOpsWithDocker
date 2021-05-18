@@ -1,0 +1,5 @@
+hiski@Hiski-MBP part1 % docker ps -a                 
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES
+025016a04ffa   nginx     "/docker-entrypoint.…"   3 seconds ago   Up 2 seconds   80/tcp    vigorous_northcutt
+0109e3494379   nginx     "/docker-entrypoint.…"   5 seconds ago   Up 4 seconds   80/tcp    elegant_euclid
+a084eec86d43   nginx     "/docker-entrypoint.…"   8 seconds ago   Up 7 seconds   80/tcp    elated_heisenberg

@@ -1,0 +1,7 @@
+backend:
+cd server
+docker build . -t backend && docker run -it --rm -p 8080:8080 backend
+
+frontend:
+cd client
+docker build . -t frontend && docker run -it --rm -p 5000:5000 frontend

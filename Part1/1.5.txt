@@ -1,0 +1,5 @@
+ubuntu size: 83MB
+alpine size: 15.7MB
+
+docker container exec -it frosty_blackwell sh
+Secret functionality is the same

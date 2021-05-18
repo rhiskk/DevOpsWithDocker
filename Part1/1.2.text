@@ -1,0 +1,4 @@
+hiski@Hiski-MBP part1 % docker ps -a         
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+hiski@Hiski-MBP part1 % docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
