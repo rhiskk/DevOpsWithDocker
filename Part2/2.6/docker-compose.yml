@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+
+    frontend:
+        image: frontend
+        ports:
+          - 5000:5000
+
+    backend:
+        image: backend
+        environment:
+          - REDIS_HOST=redis
+          - POSTGRES_HOST=db
+          - POSTGRES_USER=user
+          - POSTGRES_PASSWORD=password
+          - POSTGRES_DATABASE=dbname
+        ports:
+          - 8080:8080
+
+    redis:
+        image: redis
+
+    db:
+        image: postgres
+        environment:
+           - POSTGRES_USER=user
+           - POSTGRES_PASSWORD=password
+           - POSTGRES_DB=dbname

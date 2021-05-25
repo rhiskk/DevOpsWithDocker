@@ -1,0 +1,3 @@
+in frontend Dockerfile I had to change ENV REACT_APP_BACKEND_URL from  http://localhost:8080 to http://localhost:80/api/
+
+in backedn Dockerfile I had to change ENV REQUEST_ORIGIN from http://localhost:5000 to http://localhost:80/
