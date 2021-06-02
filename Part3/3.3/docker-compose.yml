@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+
+    frontend:
+        image: frontend
+        restart: unless-stopped
+
+    backend:
+        image: backend
+        environment:
+          - REDIS_HOST=redis
+          - POSTGRES_HOST=db
+          - POSTGRES_USER=user
+          - POSTGRES_PASSWORD=password
+          - POSTGRES_DATABASE=dbname
+        restart: unless-stopped
+
+    redis:
+        image: redis
+        volumes:
+          - ./redis:/data
+        restart: unless-stopped
+
+    db:
+        image: postgres
+        volumes:
+          - ./database:/var/lib/postgresql/data
+        environment:
+          - POSTGRES_USER=user
+          - POSTGRES_PASSWORD=password
+          - POSTGRES_DB=dbname
+        restart: unless-stopped
+
+    proxy:
+        image: jwilder/nginx-proxy
+        volumes:
+          - /var/run/docker.sock:/tmp/docker.sock:ro
+          - ./nginx.conf:/etc/nginx/nginx.conf
+        ports:
+          - 80:80
+        container_name: nginx

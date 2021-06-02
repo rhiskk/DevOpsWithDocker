@@ -1,0 +1,3 @@
+frontend image size decreased from 420MB to 351MB when changed FROM ubuntu:18.04 to FROM node:16-alpine3.13
+
+backend image size decreased from  1.01GB to 447MB when changed FROM golang:1.16 to FROM golang:1.16-alpine3.13
